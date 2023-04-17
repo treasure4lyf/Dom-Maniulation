@@ -20,3 +20,38 @@ diva.appendChild(hia);
 const parah = document.createElement("p");
 diva.appendChild(parah);
 container.appendChild(diva);
+
+const btn = document.querySelector("#btn"); 
+btn.addEventListener('click', () => {
+    document.body.style.backgroundColor = "fuchsia";
+});
+
+function alertFunction() {
+    alert("you are welcome");
+}
+ btn.addEventListener('click', alertFunction);
+
+btn.addEventListener('click', function (e) { 
+    console.log(e);
+});
+
+btn.addEventListener('click', function (e) { 
+    console.log(e.target);
+});
+btn.addEventListener('click', function (e) { 
+    e.target.style.background = 'red';
+});
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      alert(button.id);
+    });
+});
+
+
+
+
+
+
+
